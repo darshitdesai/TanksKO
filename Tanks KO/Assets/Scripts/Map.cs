@@ -36,6 +36,8 @@ public class Map : MonoBehaviour {
         Color colourSky;
         float[] colourRules = new float[8];
         float colourSkew = 0.5f;
+        float colourLeft = 0.5f;
+        float colourRight = 0.5f;
 
         if (biome == "desert")
         {
@@ -79,6 +81,19 @@ public class Map : MonoBehaviour {
             colourSky = Color.black;
             colourSkew = 0.9f;
             colourRules = new float[] { -0.1f, -0.1f, -0.1f, -0.1f, -0.1f, -0.1f, -0.1f, 0.2f };
+        }
+        else if (biome == "glacier")
+        {
+            heightNodes = new int[20];
+            heightVariance = 20;
+            heightLimit = 500;
+            colourA = new Color(0.8f, 0.8f, 1.0f);
+            colourB = new Color(1.0f, 1.0f, 1.0f);
+            colourSky = new Color(0.5f, 0.5f, 0.8f);
+            colourRules = new float[] { -0.03f, -0.03f, 0f, 0.01f, -0.05f, -0.02f, 0.1f, 0.6f };
+            colourLeft = 0.4f;
+            colourRight = 0.6f;
+            
         }
         else
         {
